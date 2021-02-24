@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import { useState } from "react";
 import "./App.css";
 import SearchBox from "./Components/SearchBox.jsx";
