@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 
-const Searchbox = ({ delay, onChange, setVal }) => {
+const Searchbox = ({ delay, onChange, setVal,placeholder },props) => {
 	const [value, setValue] = useState("");
 
 	useEffect(() => {
@@ -13,7 +13,9 @@ const Searchbox = ({ delay, onChange, setVal }) => {
 			<input
 				type='text'
 				value={value}
+                placeholder={placeholder}
 				onChange={(event) => setValue(event.target.value)}
+                {...props}
 			/>
 		</>
 	);
