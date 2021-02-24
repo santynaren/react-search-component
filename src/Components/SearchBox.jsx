@@ -4,8 +4,8 @@ const Searchbox = ({ delay, onChange, setVal,placeholder },props) => {
 	const [value, setValue] = useState("");
     const search = useRef();
 	useEffect(() => {
-		const timeOutId = setTimeout(() => setVal(value), delay);
-		return () => clearTimeout(timeOutId);
+		const timeOut = setTimeout(() => setVal(value), delay);
+		return () => clearTimeout(timeOut);
 	}, [delay, setVal, value]);
 
 	return (
